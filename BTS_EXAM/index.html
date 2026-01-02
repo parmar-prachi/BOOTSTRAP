@@ -1,0 +1,407 @@
+<!-- Create a Blog Section Using a Card Component.
+ Create a Banner design Using a Carousel Component.
+ Create a User registration form Using Form Component.
+ Create a responsive GRID layout Using Column Class and offset property and add images and content.
+ Create an FAQ Section Using the accordion Component and add a font utility class to format the text. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Exam</title>
+
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- <link rel="stylesheet" href="./asstes/css/bootstrap-icons.min.css"> -->
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="./asstes/css/font.css">
+    <!-- bootstrap css -->
+
+    <link rel="stylesheet" href="./asstes/css/bootstrap.min.css">
+
+    <!-- custom css -->
+
+    <link rel="stylesheet" href="./asstes/css/style.css">
+
+    <!-- favicon css
+    <link rel="icon" href="./asstes/images/c1.png"> -->
+</head>
+
+<body>
+    <header class="position-absolute w-100 z-1">
+
+        <nav class="navbar navbar-expand-lg  justify-content-between bg-transparent">
+
+            <div class="container  rounded-start-3 rounded-end-3">
+
+                <div class="logo"><a href="./index.html" class="nav-logo navbar-brand">
+                        <img src="./asstes/images/logo/logo-dark-img.png" alt="..." class="img-fluid">
+                    </a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown p-3">
+                            <a class="nav-link dropdown-toggle fs-5 text-white" href="#home">
+                                Home
+                            </a>
+                           
+                        </li>
+                        <li class="nav-item dropdown p-3">
+                            <a class="nav-link dropdown-toggle fs-5 text-white" href="#grid">
+                                Grid
+                        </a>
+                        </li>
+                        <li class="nav-item dropdown p-3">
+                            <a class="nav-link dropdown-toggle fs-5 text-white" href="#contact">
+                               Form
+                            </a>
+                            
+                        </li>
+                        <li class="nav-item dropdown p-3">
+                            <a class="nav-link dropdown-toggle fs-5 text-white" href="#card">
+                                Blog
+                            </a>
+                            
+                        <li class="nav-item dropdown p-3">
+                            <a class="nav-link dropdown-toggle fs-5 text-white" href="#faqs">
+                              Faqs
+                            </a>
+                           
+                        </li>
+                    </ul>
+
+                    <div class="btns">
+
+                        <ul class="d-flex fs-5 gap-4">
+                            <li><a href="./index.html" class="text-white"><i class="bi bi-search"></i></a></li>
+                            <li><a href="./index.html" class="text-white"><i class="bi bi-person"></i></a></li>
+                            <li><a href="./index.html" class="text-white"><i class="bi bi-heart"></i></a></li>
+                            <li><a href="./index.html" class="text-white"><i class="bi bi-bag-fill"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <section class="banner position-relative" id="#home">
+        <div class="container-fluid ">
+            <div class="row ">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./asstes/images/banner1.jpeg" class="d-block w-100" alt="...">
+                            <div class="overlay"></div>
+                            <div class="carousel-caption d-none d-md-block">
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./asstes/images/banner2.jpg" class="d-block w-100" alt="..."
+                                style="height:827px;">
+                            <div class="overlay"></div>
+                            <div class="carousel-caption d-none d-md-block">
+
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- grid  -->
+
+        <section id="grid">
+            <div class="container">
+                <div class="container py-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <div class="big-banner position-relative">
+                                <div class="subtext mb-2 position-absolute" style="top:20%;left:12%;">BEST FASHION DEALS
+                                </div>
+                                <div class="hero-text mb-4 position-absolute text-center"
+                                    style="letter-spacing:2px;font-size:60px;top:30%;left:9%;">FRESH <br> SUMMER <br>
+                                    TRENDS</div>
+                                <img src="./asstes/images/big-banner.jpg" class="hero-img" alt="...">
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-flex flex-column gap-3">
+                            <div class="side-card">
+                                <img src="./asstes/images/grid2.jpg" alt="...">
+                                <div class="label-title mt-2">NEW COLLECTION</div>
+                                <div class="label-sub">Woman fashion</div>
+                            </div>
+                            <div class="side-card">
+                                <img src="./asstes/images/grid3.jpg" alt="...">
+                                <div class="label-title mt-2">CLOTHING</div>
+                                <div class="label-sub">Woman fashion</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+
+        <!-- bolg -->
+
+        <section id="card">
+            <div class="container">
+
+                <h1 class="text-center fw-medium mb-5" style="color:#5D3B2B;">Blog</h1>
+
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <div class="image-wrapper">
+                                <img src="./asstes/images/blog1.jpg" class="card-img-top" alt="...">
+                                <a href="./index.html" class="text-dark">
+                                    <div class="hover-btn">ADD TO CART <span class="plus">+</span></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Professional Look</h5>
+                                <p class="card-text">Elevate your style with our professional clothing—tailored fits,
+                                    premium fabrics, and timeless designs for a confident,
+                                    polished appearance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image-wrapper">
+                                <img src="./asstes/images/grid3.jpg" class="card-img-top" alt="...">
+                                <a href="./index.html" class="text-dark">
+                                    <div class="hover-btn">ADD TO CART <span class="plus">+</span></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Winter Special</h5>
+                                <p class="card-text">Stay warm and stylish this winter with our special collection—cozy
+                                    layers, rich textures, and trendy designs for every
+                                    occasion.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image-wrapper">
+                                <img src="./asstes/images/blog3.jpg" class="card-img-top" alt="...">
+                                <a href="./index.html" class="text-dark">
+                                    <div class="hover-btn">ADD TO CART <span class="plus">+</span></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Summer Special</h5>
+                                <p class="card-text">Beat the heat in style with our summer collection—light fabrics,
+                                    vibrant colors, and breezy designs perfect for sunny
+                                    days.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="image-wrapper">
+                                <img src="./asstes/images/blog2.jpg" class="card-img-top" alt="...">
+                                <a href="./index.html" class="text-dark">
+                                    <div class="hover-btn">ADD TO CART <span class="plus">+</span></div>
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Party Look</h5>
+                                <p class="card-text">Shine at every party with our stunning outfits—glamorous styles,
+                                    bold colors, and perfect fits to make you stand out.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- form -->
+
+        <section class="p-5" id="contact">
+
+            <div class="container">
+
+                <h3 class="p-4 fw-bold text-center">REGISTRATION FORM</h3>
+
+                <div class="row align-items-center d-flex justify-content-center">
+
+                    <div class="col-md-6 left-image d-none d-md-block">
+                        <div class="image-wrapper2">
+                            <img src="./asstes/images/Slider-2.1.jpg" alt="form" class="img-fluid w-100">
+                            <a href="./index.html" class="text-dark">
+                                <div class="hover-btn2">LOG IN</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-5">
+                        <div class="form-box w-100">
+
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="First Name">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Email Address">
+                                </div>
+                                <div class="mb-3">
+                                    <select class="form-select">
+                                        <option selected disabled>Gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="password" class="form-control" placeholder="Confirm Password">
+                                </div>
+                                <button type="submit" class="btn register-btn w-100 p-3">Register →</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQS -->
+
+        <section class="p-5" id="faqs">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-10">
+                        <div class="accordion" id="accordionExample">
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button fs-5 text-dark bg-transparent" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                        aria-controls="collapseOne">
+                                        Shipping
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li class="mt-2" style="list-style:circle;"><a href="./index.html"
+                                                    >Which Shipping carriers do you use ?</a>
+                                            </li>
+                                            <li class="mt-3" style="list-style:circle;"><a href="./index.html"
+                                            >When will my order ship ?</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed fs-5 text-dark bg-transparent"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                        aria-expanded="false" aria-controls="collapseTwo">
+                                        Returns & Exchanges
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li class="mt-2" style="list-style:circle;"><a href="./index.html"
+                                                >What are your returne and exchange policies
+                                                    ?</a>
+                                            </li>
+                                            <li class="mt-3" style="list-style:circle;"><a href="./index.html"
+                                                >Can i return itemes to one of your retail
+                                                    locations ?</a></li>
+                                            <li class="mt-3" style="list-style:circle;"><a href="./index.html"
+                                                >Can i still return an iteme if it's been
+                                                    washed ?</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item bg-transparent">
+                                <h2 class="accordion-header" id="headingThree">
+                                    <button class="accordion-button collapsed fs-5 text-dark bg-transparent"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                        aria-expanded="false" aria-controls="collapseThree">
+                                        Order
+                                    </button>
+                                </h2>
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li class="mt-2" style="list-style:circle;"><a href="./index.html"
+                                                    >Can i cancel my order ?</a>
+                                            </li>
+                                            <li class="mt-3" style="list-style:circle;"><a href="./index.html"
+                                                    >How do i modify the items in my order ?</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- js css -->
+
+    <script src="./asstes/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
